@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400&family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,600&family=Poppins:wght@500;600;700&family=Roboto:wght@100;300;400&family=Titillium+Web&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,600&family=Poppins:wght@500;600;700&family=Roboto:wght@100;300;400&family=Titillium+Web&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Book Libirary</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <h1>Book Libirary <span style="font-family :'Amatic SC', sans-serif; font: size 150px;">(Cruds)</span> </h1>
+  </header>
+  <section>
+    <div class="data-input">
+      <div class="d-flex">
+        <input class="title" type="text" placeholder=" Title :">
+        <input onkeyup="getTotal()" class="Price" type="number" placeholder=" Price : ">
+      </div>
+      <br>
+      <br>
+      <div class="d-flex">
+        <input onkeyup="getTotal()" class="taxies" type="number" placeholder=" taxies : ">
+        <input onkeyup="getTotal()"  class="Ads" type="number" placeholder=" Ads : ">
+      </div>
+      <br>
+      <br>
+      <div class="d-flex">
+        <input onkeyup="getTotal()" class="discount" type="number" placeholder=" discount : ">
+        <input class="category" type="text" placeholder=" category : ">
+      </div>
+      <br>
+      <br>
+      <div class="d-flex">
+        <input class="count" type="text" placeholder=" count : ">
+        <button  class="create">create</button>
+      </div>
+    </div>
+  </section>
+  <section class="table-sec">
+      <main>
+        <div class="d-flex">
+          <button id="total" class="btn1 total">total</button>
+          <input class="ser" onkeyup="searchBook(this.value)" id="Search" type="text" placeholder="Search">
+        </div>
+        <div class="d-flex">
+          <button class="create button-search" onclick="search(this.id)" id="searchByTitle" >search By Title</button>
+          <button class="create" onclick="search(this.id)" id="searchByprise">search By price</button>
+        </div>
+        <div id="deletAllBooks"></div>
+      </main>
+      <table id="books">
+        <tr>
+          <th>Title</th>
+          <th>Price</th>
+          <th>taxies</th>
+          <th>Ads</th>
+          <th>discount</th>
+          <th>category</th>
+          <th>total</th>
+          <th>Delet</th>
+          <th>Edit</th>
+        </tr>
+        <tbody id="tbody">
+
+        </tbody>
+        
+      </table>
+      <script src="main.js"></script>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
